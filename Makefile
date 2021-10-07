@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alelievr <alelievr@student.42.fr>          +#+  +:+       +#+         #
+#    By: takkatao <takkatao@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created  2015/04/04 19:22:36 by alelievr          #+#    #+#              #
-#    Updated: 2019/11/03 22:05:40 by tjans         ########   odam.nl          #
+#    Created: 2015/04/04 19:22:36 by alelievr          #+#    #+#              #
+#    Updated: 2021/10/07 16:36:04 by takkatao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -187,7 +187,7 @@ $(ASSETDIR)/$(NAME): $(OBJ)
 		$(CC), $(CFLAGS), $(OPTFLAGS), $(VLIBDIR), $(VLIB), $(RFRAME) $(LIBS), -o, $(ASSETDIR)/$(NAME), $(OBJ))
 
 #	Objects compilation
-$(OBJDIR)/%.o: $(SRCDIR)/%.c include/libft_test.h $(SRCDIR)/init.c
+$(OBJDIR)/%.o: $(SRCDIR)/%.c include/libft_test.h
 	@mkdir -p $(OBJDIR)/$(dir $<)
 	@$(call disp_title,Building,$(OBJ_COLOR_T))
 	@$(call exec_color,"\033[38;5;$(OBJ_COLOR_T)m➤ \033[0m\033[38;5;$(OBJ_COLOR)m",\
