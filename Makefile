@@ -15,7 +15,7 @@
 #################
 
 #	Libft Makefile path
-LIBFTDIR	=	../libft
+LIBFTDIR	=	../github/42/libft
 
 #	Sources
 SRCDIR		=	./
@@ -187,7 +187,7 @@ $(ASSETDIR)/$(NAME): $(OBJ)
 		$(CC), $(CFLAGS), $(OPTFLAGS), $(VLIBDIR), $(VLIB), $(RFRAME) $(LIBS), -o, $(ASSETDIR)/$(NAME), $(OBJ))
 
 #	Objects compilation
-$(OBJDIR)/%.o: $(SRCDIR)/%.c include/libft_test.h
+$(OBJDIR)/%.o: $(SRCDIR)/%.c include/libft_test.h $(SRCDIR)/init.c
 	@mkdir -p $(OBJDIR)/$(dir $<)
 	@$(call disp_title,Building,$(OBJ_COLOR_T))
 	@$(call exec_color,"\033[38;5;$(OBJ_COLOR_T)m➤ \033[0m\033[38;5;$(OBJ_COLOR)m",\
