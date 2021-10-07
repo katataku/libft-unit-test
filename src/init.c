@@ -6,7 +6,7 @@
 /*   By: takkatao <takkatao@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 17:30:13 by alelievr          #+#    #+#             */
-/*   Updated: 2021/10/07 14:57:31 by takkatao         ###   ########.fr       */
+/*   Updated: 2021/10/08 08:42:03 by takkatao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,59 +36,66 @@ char			*g_versus = NULL;
 t_libft_subtest	fun_subtest_table[SUBTEST_SIZE];
 t_libft_subbench fun_subbench_table[SUBTEST_SIZE];
 t_libft_test	fun_test_table[] = {
-	{"ft_memset", test_ft_memset, 1, 1},
-	{"ft_bzero", test_ft_bzero, 1, 1},
-	{"ft_memcpy", test_ft_memcpy, 1, 1},
-	{"ft_memccpy", test_ft_memccpy, 1, 1},
-	{"ft_memmove", test_ft_memmove, 1, 1},
-	{"ft_memchr", test_ft_memchr, 1, 1},
-	{"ft_memcmp", test_ft_memcmp, 1, 1},
-	{"ft_strlen", test_ft_strlen, 1, 1},
-	{"ft_strdup", test_ft_strdup, 1, 1},
-	{"ft_strcpy", test_ft_strcpy, 1, 1},
-	{"ft_strncpy", test_ft_strncpy, 1, 1},
-	{"ft_strcat", test_ft_strcat, 1, 1},
-	{"ft_strncat", test_ft_strncat, 1, 1},
-	{"ft_strlcat", test_ft_strlcat, 1, 1},
-	{"ft_strchr", test_ft_strchr, 1, 1},
-	{"ft_strrchr", test_ft_strrchr, 1, 1},
-	{"ft_strstr", test_ft_strstr, 1, 1},
-	{"ft_strnstr", test_ft_strnstr, 1, 1},
-	{"ft_strcmp", test_ft_strcmp, 1, 1},
-	{"ft_strncmp", test_ft_strncmp, 1, 1},
-	{"ft_atoi", test_ft_atoi, 1, 1},
 	{"ft_isalpha", test_ft_isalpha, 1, 1},
 	{"ft_isdigit", test_ft_isdigit, 1, 1},
 	{"ft_isalnum", test_ft_isalnum, 1, 1},
 	{"ft_isascii", test_ft_isascii, 1, 1},
 	{"ft_isprint", test_ft_isprint, 1, 1},
+	{"ft_strlen", test_ft_strlen, 1, 1},
+	{"ft_memset", test_ft_memset, 1, 1},
+	{"ft_bzero", test_ft_bzero, 1, 1},
+	{"ft_memcpy", test_ft_memcpy, 1, 1},
+	{"ft_memccpy", test_ft_memccpy, 1, 1},
+	{"ft_strlcpy", test_ft_strlcpy, 1, 1},
+	{"ft_strlcat", test_ft_strlcat, 1, 1},
 	{"ft_toupper", test_ft_toupper, 1, 1},
 	{"ft_tolower", test_ft_tolower, 1, 1},
+	{"ft_strchr", test_ft_strchr, 1, 1},
+	{"ft_strrchr", test_ft_strrchr, 1, 1},
+	{"ft_strcmp", test_ft_strcmp, 1, 1},
+	{"ft_strncmp", test_ft_strncmp, 1, 1},
+	{"ft_strnstr", test_ft_strnstr, 1, 1},
+	{"ft_atoi", test_ft_atoi, 1, 1},
+	{"ft_calloc", test_ft_calloc, 1, 1},
+	{"ft_strdup", test_ft_strdup, 1, 1},
 
-	{"ft_memalloc", test_ft_memalloc, 2, 1},
-	{"ft_memdel", test_ft_memdel, 2, 1},
-	{"ft_strnew", test_ft_strnew, 2, 1},
-	{"ft_strdel", test_ft_strdel, 2, 1},
-	{"ft_strclr", test_ft_strclr, 2, 1},
-	{"ft_striter", test_ft_striter, 2, 1},
-	{"ft_striteri", test_ft_striteri, 2, 1},
-	{"ft_strmap", test_ft_strmap, 2, 1},
-	{"ft_strmapi", test_ft_strmapi, 2, 1},
-	{"ft_strequ", test_ft_strequ, 2, 1},
-	{"ft_strnequ", test_ft_strnequ, 2, 1},
+	{"ft_memmove", test_ft_memmove, 1, 0},
+	{"ft_memchr", test_ft_memchr, 1, 0},
+	{"ft_memcmp", test_ft_memcmp, 1, 0},
+	{"ft_strcpy", test_ft_strcpy, 1, 0},
+	{"ft_strncpy", test_ft_strncpy, 1, 0},
+	{"ft_strcat", test_ft_strcat, 1, 0},
+	{"ft_strncat", test_ft_strncat, 1, 0},
+	{"ft_strrchr", test_ft_strrchr, 1, 0},
+	{"ft_strstr", test_ft_strstr, 1, 0},
+
+
 	{"ft_substr", test_ft_substr, 2, 1}, 
 	{"ft_strjoin", test_ft_strjoin, 2, 1},
 	{"ft_strtrim", test_ft_strtrim, 2, 1},
 	{"ft_split", test_ft_split, 2, 1}, 
 	{"ft_itoa", test_ft_itoa, 2, 1},
-	{"ft_putchar", test_ft_putchar, 2, 1},
-	{"ft_putstr", test_ft_putstr, 2, 1},
-	{"ft_putendl", test_ft_putendl, 2, 1},
-	{"ft_putnbr", test_ft_putnbr, 2, 1},
+	{"ft_strmapi", test_ft_strmapi, 2, 1},
+	{"ft_striteri", test_ft_striteri, 2, 1},
 	{"ft_putchar_fd", test_ft_putchar_fd, 2, 1},
 	{"ft_putstr_fd", test_ft_putstr_fd, 2, 1},
 	{"ft_putendl_fd", test_ft_putendl_fd, 2, 1},
 	{"ft_putnbr_fd", test_ft_putnbr_fd, 2, 1},
+
+	{"ft_memalloc", test_ft_memalloc, 2, 0},
+	{"ft_memdel", test_ft_memdel, 2, 0},
+	{"ft_strnew", test_ft_strnew, 2, 0},
+	{"ft_strdel", test_ft_strdel, 2, 0},
+	{"ft_strclr", test_ft_strclr, 2, 0},
+	{"ft_striter", test_ft_striter, 2, 0},
+	{"ft_strmap", test_ft_strmap, 2, 0},
+	{"ft_strequ", test_ft_strequ, 2, 0},
+	{"ft_strnequ", test_ft_strnequ, 2, 0},
+	{"ft_putchar", test_ft_putchar, 2, 0},
+	{"ft_putstr", test_ft_putstr, 2, 0},
+	{"ft_putendl", test_ft_putendl, 2, 0},
+	{"ft_putnbr", test_ft_putnbr, 2, 0},
+
 
 	{"ft_lstnew", test_ft_lstnew, 3, 0},
 	{"ft_lstdelone", test_ft_lstdelone, 3, 0},
@@ -101,8 +108,6 @@ t_libft_test	fun_test_table[] = {
 	{"ft_lstmap", test_ft_lstmap, 3, 0},
 
 
-	{"ft_strlcpy", test_ft_strlcpy, 1, 0},
-	{"ft_calloc", test_ft_calloc, 1, 0},
 
 
 	{"ft_islower", test_ft_islower, 3, 0},
